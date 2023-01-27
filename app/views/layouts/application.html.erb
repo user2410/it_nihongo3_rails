@@ -14,7 +14,7 @@
     <a href="/">ホーム</a>
     <br>
     <% if @signed_in %>
-      こんにちは <a href="/users/show"><%= @user.email%></a>
+      こんにちは <a href="/users/show"><%= @user.name%></a>
       <br>
       <%= link_to "サインアウト", destroy_user_session_path, :data => { :no_turbolink => true } %>
     <% else %>
