@@ -1,0 +1,12 @@
+<% if @signed_in %>
+	Hi <strong><%= @user.email%></strong>
+	&nbsp;
+	<%= link_to "サインアウト", destroy_user_session_path, :data => { :no_turbolink => true } %>
+<% else %>
+<%= link_to "サインイン", new_user_session_path, :data => { :no_turbolink => true } %>
+&nbsp;
+<%= link_to "登録ユーザー", new_user_registration_path, :data => { :no_turbolink => true } %>
+<% end %>
+<hr>
+<br>
+<h1>HOME PAGE</h1>
