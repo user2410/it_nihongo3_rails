@@ -9,4 +9,11 @@
     <%= book.number_of_pages %>
   </p>
 
+  <% if book.image.attached? %>
+  <p>
+      <strong>Image:</strong>
+      <%= image_tag book.image %>
+  </p>
+  <% end %>
+
 </div>
