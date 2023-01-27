@@ -5,3 +5,7 @@
 <p><%= @user.age %></p>
 <h2>メールアドレス</h2>
 <p><%= @user.email %></p>
+<% if @user.image.attached? %>
+	<h2>アバター</h2>
+	<%= image_tag @user.image %>
+<% end %>
